@@ -5,8 +5,8 @@ import UserSide from "@/layout/UserSide.vue";
 
 <template>
   <PrimeToast/>
-  <div class="flex">
-    <div class="flex-1 p-4"><StatsSide/></div>
-    <div class="flex-1 p-4"><UserSide/></div>
+  <div class="grid">
+    <div class="col-12 md:col-6 p-4"><StatsSide/></div>
+    <div class="col-12 md:col-6 p-4"><UserSide/></div>
   </div>
 </template>
