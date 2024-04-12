@@ -1,18 +1,6 @@
 import axios from "axios";
 import {ref} from "vue";
 
-const loggedUser = ref(false);
-
-export function getLogged()
-{
-    return loggedUser.value;
-}
-
-export function setLogged()
-{
-    loggedUser.value = true;
-}
-
 const triggerLead = ref(false);
 
 export function getTrigger()

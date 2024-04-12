@@ -1,12 +1,10 @@
 <script setup>
 import {defineEmits, ref} from 'vue';
-import {setLogged} from "@/services/service";
 
 const emit = defineEmits(['signIn'])
 
 const email = ref('');
 const signIn = () => {
-  setLogged();
   emit('signIn', email.value);
 }
 

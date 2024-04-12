@@ -1,7 +1,7 @@
 <script setup>
 import StatsElement from "@/components/StatsElement.vue";
 import {computed, onMounted, ref, watch} from "vue";
-import {getLogged, getPosts, getTrigger} from "@/services/service";
+import {getPosts, getTrigger} from "@/services/service";
 
 const elements = ref([]);
 
@@ -10,16 +10,14 @@ onMounted(async () => {
 })
 
 const handleStep = () => {
-  let user = elements.value[5];
-  user.posts += 20;
+  let user = elements.value[4];
+  user.posts += 50;
   elements.value = [...elements.value];
 }
 
-const topPosition = computed(() => getLogged())
+const topPosition = computed(() => getTrigger());
 
-const transition = computed(() => getTrigger());
-
-watch(transition, async (newValue) => {
+watch(topPosition, async (newValue) => {
   if (newValue) {
     handleStep();
   }
