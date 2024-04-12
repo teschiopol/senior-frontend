@@ -1,4 +1,4 @@
-# fe_se
+# Senior Frontend Test
 
 ## Project setup
 ```
